@@ -1,25 +1,60 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>TodoMvc</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta charset="utf-8">
+  <title>Ember.js • TodoMVC</title>
+  <link rel="stylesheet" href="assets/todo-mvc.css">
+</head>
+<body>
+<section id="todoapp">
+  <header id="header">
+    <h1>todos</h1>
+    <input type="text" id="new-todo" placeholder="What needs to be done?" />
+  </header>
 
-    {{content-for 'head'}}
+  <section id="main">
+    <ul id="todo-list">
+      <li class="completed">
+        <input type="checkbox" class="toggle">
+        <label>Learn Ember.js</label><button class="destroy"></button>
+      </li>
+      <li>
+        <input type="checkbox" class="toggle">
+        <label>...</label><button class="destroy"></button>
+      </li>
+      <li>
+        <input type="checkbox" class="toggle">
+        <label>Profit!</label><button class="destroy"></button>
+      </li>
+    </ul>
 
-    <link rel="stylesheet" href="assets/vendor.css">
-    <link rel="stylesheet" href="assets/todo-mvc.css">
+    <input type="checkbox" id="toggle-all">
+  </section>
 
-    {{content-for 'head-footer'}}
-  </head>
-  <body>
-    {{content-for 'body'}}
+  <footer id="footer">
+        <span id="todo-count">
+          <strong>2</strong> todos left
+        </span>
+    <ul id="filters">
+      <li>
+        <a href="all" class="selected">All</a>
+      </li>
+      <li>
+        <a href="active">Active</a>
+      </li>
+      <li>
+        <a href="completed">Completed</a>
+      </li>
+    </ul>
 
-    <script src="assets/vendor.js"></script>
-    <script src="assets/todo-mvc.js"></script>
+    <button id="clear-completed">
+      Clear completed (1)
+    </button>
+  </footer>
+</section>
 
-    {{content-for 'body-footer'}}
-  </body>
+<footer id="info">
+  <p>Double-click to edit a todo</p>
+</footer>
+</body>
 </html>
